@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">Riddles</string>
+    <string name="username_resource">Username</string>
+    <string name="password_resource">Password</string>
+    <string name="login_now_resource">Login Now</string>
+    <string name="or_resource">or</string>
+    <string name="don_t_have_an_account_register_here_resource">Don\'t have an account? Register here.</string>
+    <string name="forgot_password_resource">Forgot password?</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="firstname_resource">FirstName</string>
+    <string name="lastname_resource">LastName</string>
+    <string name="oib_resource">OIB</string>
+    <string name="email_resource">Email</string>
+    <string name="register_resource">Register</string>
+    <string name="new_pasword_resource">New pasword</string>
+    <string name="confirm_resource">Confirm</string>
+    <string name="enter_text_resource">Enter text</string>
+    <string name="enter_the_name_of_your_first_pet_security_question_resource">Enter the name of your first pet (security question):</string>
+    <string name="enter_username_resource">Enter username</string>
+    <string name="security_name_of_the_first_pet_resource">Security: Name of the first pet</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_levels">Levels</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="did_not_entered_login_info">You didn\'t enter required info!</string>
+    <string name="username_or_password_not_correct">Your username or password is not correct!</string>
+    <string name="cannot_be_empty">This field can\'t be empty!</string>
+    <string name="title_resource">Tons of riddles to boost up your brain power!</string>
+    <string name="start_resource">Start</string>
+    <string name="log_out_resource">Log out</string>
+    <string name="log_out_question">Are you sure you want to log out?</string>
+    <string name="yes_resource">yes</string>
+    <string name="no_resource">no</string>
+    <string name="account_resource">Account</string>
+    <string name="initial_letter" translatable="false">A</string>
+    <string name="delete_resource">Delete</string>
+    <string name="password_demands">Password must have at least 8 characters, one letter and one number!</string>
+    <string name="registration_success">You successfully registered!</string>
+    <string name="username_taken">This username is already taken.</string>
+    <string name="valid_email">Please insert valid email address!</string>
+    <string name="changed_password_success">You successfully changed your password!</string>
+    <string name="inserted_info_not_correct">Inserted username or security text is not correct!</string>
+    <string name="high_scores_resource">High scores</string>
+    <string name="position_resource">Level %1$s</string>
+    <string name="game_resource">Game</string>
+    <string name="score_resource">Score</string>
+    <string name="best_players">Best players</string>
+    <string name="settings_resource">Settings</string>
+    <string name="enable_notifications_resource">Enable or disable notifications</string>
+    <string name="notification_text">Play our game and have some fun.</string>
+    <string name="notification_title">We miss you!</string>
+    <string name="choose_sound">Choose notification sound</string>
+    <string name="wrong_answer_resource">Wrong answer</string>
+    <string name="try_again_resource">Try again</string>
+    <string name="false_picture_resource">false_picture</string>
+    <string name="true_slika_resource">true_slika</string>
+    <string name="continue_resource">Continue</string>
+    <string name="correct_resource">Correct</string>
+    <string name="end_game">End game</string>
+    <string name="end">You successfully finished the game! We hope you enjoyed it and had some fun. If you encountered any issues please let us know. You can contact us on the email: support@zagonetke.com</string>
+    <string name="score_text_resource">Score: %1$s</string>
+    <string name="error_msg">You can\'t se score due to internet connection problems.</string>
+    <string name="joker_resource">Joker</string>
+    <string name="joker_used_resource">You don\'t have joker help available!</string>
+    <string name="joker_question">You have one joker help available. It will give you a solution for this riddle and it will cost you 50 points.</string>
+    <string name="dont_have_enough_points">You must have at least 50 points for joker help!</string>
+    <string name="more_resource">More</string>
+    <string name="reset_your_stats">Reset your stats</string>
+    <string name="reset_question_resource">Are you sure you want to reset all the progress you made?</string>
+    <string name="choose_design_for_toast_resource">Choose design for toast messages</string>
+    <string name="subscribe_to_email_list">Subscribe to our email list</string>
+    <string name="seekbar_number_of_subscribers">%1$s are already subscribed to our mailing list!</string>
+    <string name="image_description">image_description</string>
+    <string-array name="sounds">
+        <item>sound1</item>
+        <item>sound2</item>
+        <item>sound3</item>
+    </string-array>
+    <string-array name="toasts">
+        <item>default</item>
+        <item>dark</item>
+        <item>light</item>
+    </string-array>
+
+</resources>

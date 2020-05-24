@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="General">
+    <CheckBoxPreference
+        app:allowDividerAbove="true"
+        android:defaultValue="true"
+        android:key="@string/enable_notifications_resource"
+        android:summaryOff="Disabled"
+        android:summaryOn="Enabled"
+        android:title="@string/enable_notifications_resource"/>
+            <ListPreference
+                android:dependency="@string/enable_notifications_resource"
+                android:entries="@array/sounds"
+                android:entryValues="@array/sounds"
+                android:title="@string/choose_sound"
+                android:key="@string/choose_sound"
+                />
+        <ListPreference
+            app:allowDividerAbove="true"
+            android:entries="@array/toasts"
+            android:entryValues="@array/toasts"
+            android:title="@string/choose_design_for_toast_resource"
+            android:key="@string/choose_design_for_toast_resource"/>
+
+        <SwitchPreference
+            app:allowDividerAbove="true"
+            android:title="@string/subscribe_to_email_list"
+            android:key="@string/subscribe_to_email_list"
+            android:defaultValue="false"
+            android:summaryOff="Not subscribed"
+            android:summaryOn="Subscribed"
+            />
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

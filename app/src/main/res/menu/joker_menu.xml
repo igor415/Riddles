@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/jokerIcon"
+        android:title="@string/joker_resource"
+        android:icon="@drawable/ic_joker"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/more"
+        android:title="@string/more_resource"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_more_vert_black_24dp">
+        <menu>
+            <item
+                android:id="@+id/resetIcon"
+                android:title="@string/reset_your_stats"
+                android:icon="@drawable/ic_reset"/>
+        </menu>
+
+    </item>
+</menu>
