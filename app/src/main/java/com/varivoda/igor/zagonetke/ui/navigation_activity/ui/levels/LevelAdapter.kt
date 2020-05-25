@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.varivoda.igor.zagonetke.R
 import com.varivoda.igor.zagonetke.models.Riddle
 import com.varivoda.igor.zagonetke.models.ScoresEntry
+import com.varivoda.igor.zagonetke.ui.navigation_activity.ui.riddle.MY_TYPEFACE
+import com.varivoda.igor.zagonetke.ui.shared.inflater
 
 class LevelAdapter(private val riddles: List<Riddle>,private val scoresEntry: ScoresEntry): RecyclerView.Adapter<LevelAdapter.MyViewHolder>() {
 
@@ -20,14 +22,14 @@ class LevelAdapter(private val riddles: List<Riddle>,private val scoresEntry: Sc
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.level_item,parent,false))
+        return MyViewHolder(parent.context.inflater.inflate(R.layout.level_item,parent,false))
     }
 
     override fun getItemCount(): Int = riddles.size
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.numberOfLevel.text = holder.itemView.context.getString(R.string.position_resource,(position+1).toString())
-        holder.numberOfLevel.typeface = Typeface.createFromAsset(holder.itemView.context.assets, "fonts/spicy.otf")
+        holder.numberOfLevel.typeface = Typeface.createFromAsset(holder.itemView.context.assets, MY_TYPEFACE)
         if(scoresEntry.number>position){
             holder.numberOfLevel.setTextColor(Color.WHITE)
             holder.numberOfLevel.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0,R.drawable.ic_check,0)

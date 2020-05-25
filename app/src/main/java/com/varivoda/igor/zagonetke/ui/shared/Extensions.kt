@@ -4,6 +4,8 @@ import android.content.Context
 import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 
@@ -29,3 +31,8 @@ fun <T> retrofit2.Response<T>.bodyOrNull(): T? {
     else
         null
 }
+
+val Context.inflater: LayoutInflater
+    get() = LayoutInflater.from(this)
+
+fun <T: View> View.bindView(id: Int) = lazy { findViewById<T>(id) }

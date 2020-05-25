@@ -10,19 +10,21 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.varivoda.igor.zagonetke.R
 import com.varivoda.igor.zagonetke.models.ScoresEntry
+import com.varivoda.igor.zagonetke.ui.shared.bindView
+import com.varivoda.igor.zagonetke.ui.shared.inflater
 
 const val current_user = "#ebf0f7"
 
 class HighScoreAdapter(private val highScoreList: List<ScoresEntry>,private val user: String) : RecyclerView.Adapter<HighScoreAdapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val username: TextView = itemView.findViewById(R.id.username)
-        val score: TextView = itemView.findViewById(R.id.score)
-        val image: ImageView = itemView.findViewById(R.id.image)
+        val username: TextView by itemView.bindView(R.id.username)
+        val score: TextView by itemView.bindView(R.id.score)
+        val image: ImageView by itemView.bindView(R.id.image)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.highscore_item,parent,false))
+        return MyViewHolder(parent.context.inflater.inflate(R.layout.highscore_item,parent,false))
     }
 
     override fun getItemCount(): Int = highScoreList.size
