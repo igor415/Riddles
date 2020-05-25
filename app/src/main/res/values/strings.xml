@@ -70,7 +70,7 @@
     <string name="end_game">End game</string>
     <string name="end">You successfully finished the game! We hope you enjoyed it and had some fun. If you encountered any issues please let us know. You can contact us on the email: support@zagonetke.com</string>
     <string name="score_text_resource">Score: %1$s</string>
-    <string name="error_msg">You can\'t se score due to internet connection problems.</string>
+    <string name="error_msg">You can\'t see score due to internet connection problems.</string>
     <string name="joker_resource">Joker</string>
     <string name="joker_used_resource">You don\'t have joker help available!</string>
     <string name="joker_question">You have one joker help available. It will give you a solution for this riddle and it will cost you 50 points.</string>

@@ -118,65 +118,35 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/slovo"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="@string/initial_letter"
-                android:textColor="@color/riddle_text"
-                android:textSize="20sp" />
+                style="@style/letter_style" />
 
             <TextView
                 android:id="@+id/two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
-                android:background="@drawable/slovo"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="@string/initial_letter"
-                android:textColor="@color/riddle_text"
-                android:textSize="20sp" />
+                style="@style/letter_style" />
 
             <TextView
                 android:id="@+id/three"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
-                android:background="@drawable/slovo"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="@string/initial_letter"
-                android:textColor="@color/riddle_text"
-                android:textSize="20sp" />
+                style="@style/letter_style" />
 
             <TextView
                 android:id="@+id/four"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
-                android:background="@drawable/slovo"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="@string/initial_letter"
-                android:textColor="@color/riddle_text"
-                android:textSize="20sp" />
+                style="@style/letter_style" />
 
             <TextView
                 android:id="@+id/five"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
-                android:background="@drawable/slovo"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="@string/initial_letter"
-                android:textColor="@color/riddle_text"
-                android:textSize="20sp" />
+                style="@style/letter_style" />
 
         </LinearLayout>
 
@@ -201,66 +171,35 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/slovo"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="@string/initial_letter"
-                android:textColor="@color/riddle_text"
-                android:textSize="20sp" />
+                style="@style/letter_style" />
 
             <TextView
                 android:id="@+id/seven"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
-                android:background="@drawable/slovo"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="@string/initial_letter"
-                android:textColor="@color/riddle_text"
-                android:textSize="20sp" />
+                style="@style/letter_style" />
 
             <TextView
                 android:id="@+id/eight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
-                android:background="@drawable/slovo"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="@string/initial_letter"
-                android:textColor="@color/riddle_text"
-                android:textSize="20sp" />
+                style="@style/letter_style" />
 
             <TextView
                 android:id="@+id/nine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
-                android:background="@drawable/slovo"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="@string/initial_letter"
-                android:textColor="@color/riddle_text"
-                android:textSize="20sp" />
+                style="@style/letter_style" />
 
             <TextView
                 android:id="@+id/ten"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
-                android:background="@drawable/slovo"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="@string/initial_letter"
-                android:textColor="@color/riddle_text"
-                android:textSize="20sp"
-
+                style="@style/letter_style"
                 />
 
         </LinearLayout>

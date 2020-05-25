@@ -78,5 +78,15 @@
         <item name="android:orientation">vertical</item>
     </style>
 
+    <style name="letter_style">
+        <item name="android:background">@drawable/slovo</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/riddle_text</item>
+        <item name="android:text">@string/initial_letter</item>
+    </style>
+
 
 </resources>

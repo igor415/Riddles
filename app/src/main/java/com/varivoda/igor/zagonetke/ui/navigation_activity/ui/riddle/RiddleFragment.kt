@@ -30,6 +30,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 const val NUMBER_OF_POINTS_FOR_CORRECT_ANSWER = 10
 const val MY_TYPEFACE = "fonts/spicy.otf"
+const val CURRENT_KEY = "current key"
 
 class RiddleFragment : Fragment() {
 
@@ -86,10 +87,15 @@ class RiddleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val riddle: Riddle? = arguments?.getParcelable(RIDDLE_OBJECT)
-        if(riddle!=null) {
+        if(riddle!=null && savedInstanceState==null) {
             currentQuestion = riddle.id
+            setRiddleData(arguments?.getParcelable(RIDDLE_OBJECT))
+        }else if(savedInstanceState!=null){
+            val result: Riddle? = savedInstanceState.getParcelable(CURRENT_KEY)
+            currentQuestion = result?.id ?: 0
+            setRiddleData(result)
         }
-        setRiddleData(arguments?.getParcelable(RIDDLE_OBJECT))
+
         (activity as NavigationActivity).supportActionBar?.title =
             getString(R.string.game_resource)
 
@@ -346,5 +352,10 @@ class RiddleFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         Utils.releaseMedia(listOf(correct,wrong,end))
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putParcelable(CURRENT_KEY,riddleList[currentQuestion])
     }
 }
