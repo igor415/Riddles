@@ -23,16 +23,8 @@
                 android:id="@+id/naslovrez"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/wrong_answer_resource"
-                android:textAlignment="center"
-                android:textColor="#ffffff"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                style="@style/popup_title"
+                android:text="@string/wrong_answer_resource" />
 
             <ImageView
                 android:id="@+id/pic"
@@ -57,18 +49,12 @@
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="20dp"
+            style="@style/guideline_style.vertical"
             app:layout_constraintGuide_percent="0.17" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="20dp"
+            style="@style/guideline_style.vertical"
             app:layout_constraintGuide_percent="0.83" />
 
 

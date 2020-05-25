@@ -16,19 +16,15 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            style="@style/high_score_text_view"
             android:layout_weight="3"
-            android:padding="10dp"
-            android:text="@string/username_resource"
-            android:textSize="16sp" />
+            android:text="@string/username_resource" />
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            style="@style/high_score_text_view"
             android:layout_weight="3"
-            android:padding="10dp"
-            android:text="@string/score_resource"
-            android:textSize="16sp" />
+            android:text="@string/score_resource" />
 
     </LinearLayout>
 

@@ -9,18 +9,12 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp"
+        style="@style/guideline_style.vertical"
         app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp"
+        style="@style/guideline_style.vertical"
         app:layout_constraintGuide_percent="0.9" />
 
     <TextView
@@ -79,23 +73,6 @@
             android:textColor="@color/login_form_details"
              />
     </com.google.android.material.textfield.TextInputLayout>
-    <!--EditText
-        android:id="@+id/passwordInput"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/login_edittext_background"
-        android:drawableEnd="@drawable/ic_eye"
-        android:hint="@string/password_resource"
-        android:inputType="textPassword"
-        android:padding="16dp"
-        android:textColor="@color/login_form_details"
-        android:textColorHint="@color/login_form_details"
-        app:layout_constraintBottom_toTopOf="@+id/guideline18"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/guideline17"
-        tools:ignore="Autofill" /-->
 
     <Button
         android:id="@+id/buttonLogIn"
@@ -161,34 +138,22 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp"
+        style="@style/guideline_style.vertical"
         app:layout_constraintGuide_percent="0.42" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp"
+        style="@style/guideline_style.vertical"
         app:layout_constraintGuide_percent="0.58" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp"
+        style="@style/guideline_style"
         app:layout_constraintGuide_percent="0.75" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp"
+        style="@style/guideline_style"
         app:layout_constraintGuide_percent="0.85" />
 
     <TextView
@@ -209,32 +174,20 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp"
+        style="@style/guideline_style"
         app:layout_constraintGuide_percent="0.65"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp"
+        style="@style/guideline_style"
         app:layout_constraintGuide_percent="0.20"/>
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp"
+        style="@style/guideline_style"
         app:layout_constraintGuide_percent="0.35"/>
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp"
+        style="@style/guideline_style"
         app:layout_constraintGuide_percent="0.50"/>
 
 
