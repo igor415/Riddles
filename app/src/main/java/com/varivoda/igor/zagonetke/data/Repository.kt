@@ -1,5 +1,6 @@
 package com.varivoda.igor.zagonetke.data
 
+import com.varivoda.igor.zagonetke.data.remote.ApiService
 import com.varivoda.igor.zagonetke.models.*
 import com.varivoda.igor.zagonetke.ui.shared.bodyOrNull
 

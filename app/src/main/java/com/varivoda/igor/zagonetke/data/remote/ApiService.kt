@@ -1,4 +1,4 @@
-package com.varivoda.igor.zagonetke.data
+package com.varivoda.igor.zagonetke.data.remote
 
 import com.varivoda.igor.zagonetke.models.*
 import okhttp3.ResponseBody

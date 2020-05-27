@@ -11,12 +11,15 @@ import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import com.varivoda.igor.zagonetke.R
 import kotlinx.android.synthetic.main.fragment_home.*
+import org.koin.android.ext.android.inject
 import java.lang.Exception
 
 const val image_url = "https://i.snipboard.io/6Lxcrt.jpg"
 class HomeFragment : Fragment() {
 
     private var navController: NavController? = null
+    private val picasso by inject<Picasso>()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -28,7 +31,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-        Picasso.get().load(image_url).error(R.drawable.ic_no_connection).into(titlePicture,object : Callback{
+        picasso.load(image_url).error(R.drawable.ic_no_connection).into(titlePicture,object : Callback{
             override fun onSuccess() {
                 progress.visibility = View.GONE
             }
