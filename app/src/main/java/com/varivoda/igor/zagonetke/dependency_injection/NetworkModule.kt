@@ -11,7 +11,7 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-private const val BASE_URL = "http://192.168.0.108:8080"
+private const val BASE_URL = "http://192.168.0.101:8080"
 
 val networkModule = module {
 

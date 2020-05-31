@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
@@ -17,6 +18,7 @@ import com.varivoda.igor.zagonetke.R
 import com.varivoda.igor.zagonetke.ui.navigation_activity.NavigationActivity
 import com.varivoda.igor.zagonetke.ui.shared.Preferences
 import com.varivoda.igor.zagonetke.ui.shared.Utils
+import com.varivoda.igor.zagonetke.ui.shared.bounceAnimation
 import com.varivoda.igor.zagonetke.ui.shared.toast
 import kotlinx.android.synthetic.main.fragment_login.*
 import org.koin.android.ext.android.inject
@@ -52,6 +54,7 @@ class LoginFragment : Fragment() {
                 startActivity(Intent(activity, NavigationActivity::class.java))
                 activity?.finish()
             } else {
+                buttonLogIn.bounceAnimation()
                 Utils.showSelectedToast(requireContext(),getString(R.string.username_or_password_not_correct))
             }
 
@@ -59,9 +62,16 @@ class LoginFragment : Fragment() {
 
     }
 
+    override fun onStart() {
+        super.onStart()
+        val animation = AnimationUtils.loadAnimation(context,R.anim.grow_animation)
+        logo.startAnimation(animation)
+    }
+
     private fun validateLoginCredentials() {
         if (usernameInput.text.trim().isEmpty() || passwordInput.text.toString().trim().isEmpty()
         ) {
+            buttonLogIn.bounceAnimation()
             Utils.showSelectedToast(requireContext(),getString(R.string.did_not_entered_login_info))
         } else {
             loginViewModel.validateUsernameAndPassword(

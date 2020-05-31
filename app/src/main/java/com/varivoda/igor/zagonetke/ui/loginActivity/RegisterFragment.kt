@@ -11,6 +11,7 @@ import androidx.navigation.Navigation
 
 import com.varivoda.igor.zagonetke.R
 import com.varivoda.igor.zagonetke.ui.shared.Utils
+import com.varivoda.igor.zagonetke.ui.shared.bounceAnimation
 import kotlinx.android.synthetic.main.fragment_register.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -41,6 +42,7 @@ class RegisterFragment : Fragment() {
                 Utils.showSelectedToast(requireContext(),getString(R.string.registration_success))
                 navController!!.popBackStack()
             }else{
+                buttonLogInNew.bounceAnimation()
                 Utils.showSelectedToast(requireContext(),getString(R.string.username_taken))
             }
         })
@@ -51,9 +53,11 @@ class RegisterFragment : Fragment() {
             && petNameInputNew.text.isNotEmpty() && emailInputNew.text.isNotEmpty() && passwordInputNew.text.toString().isNotEmpty()){
             val (digits, notDigits) = passwordInputNew.text.toString().partition { it.isDigit() }
             if(passwordInputNew.text.toString().length < 8 || digits.isEmpty() || notDigits.isEmpty()){
+                buttonLogInNew.bounceAnimation()
                 Utils.showSelectedToast(requireContext(),getString(R.string.password_demands))
             }else{
                 if(!emailInputNew.text.toString().contains('@')){
+                    buttonLogInNew.bounceAnimation()
                     Utils.showSelectedToast(requireContext(),getString(R.string.valid_email))
                     return
                 }
@@ -61,6 +65,7 @@ class RegisterFragment : Fragment() {
                     petNameInputNew.text.toString(),emailInputNew.text.toString(),passwordInputNew.text.toString())
             }
         }else{
+            buttonLogInNew.bounceAnimation()
             Utils.showSelectedToast(requireContext(),getString(R.string.did_not_entered_login_info))
         }
     }
