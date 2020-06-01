@@ -7,8 +7,6 @@
     <string name="don_t_have_an_account_register_here_resource">Don\'t have an account? Register here.</string>
     <string name="forgot_password_resource">Forgot password?</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="firstname_resource">FirstName</string>
     <string name="lastname_resource">LastName</string>
     <string name="oib_resource">OIB</string>
@@ -23,16 +21,12 @@
     <string name="title_activity_navigation">NavigationActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_levels">Levels</string>
-    <string name="menu_slideshow">Slideshow</string>
 
-    <string name="home_second">Home Second</string>
     <string name="did_not_entered_login_info">You didn\'t enter required info!</string>
     <string name="username_or_password_not_correct">Your username or password is not correct!</string>
     <string name="cannot_be_empty">This field can\'t be empty!</string>
