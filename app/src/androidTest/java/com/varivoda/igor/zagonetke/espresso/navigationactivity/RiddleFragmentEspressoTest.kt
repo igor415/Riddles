@@ -13,7 +13,7 @@ import androidx.test.rule.ActivityTestRule
 import com.varivoda.igor.zagonetke.R
 import com.varivoda.igor.zagonetke.ui.navigation_activity.NavigationActivity
 import com.varivoda.igor.zagonetke.ui.navigation_activity.ui.levels.LevelAdapter
-import org.hamcrest.BaseMatcher
+import org.hamcrest.CoreMatchers.not
 import org.hamcrest.Description
 import org.hamcrest.Matcher
 import org.hamcrest.TypeSafeMatcher
@@ -37,32 +37,23 @@ class RiddleFragmentEspressoTest {
     }
 
     @Test
-    fun testCorrectAnswer(){
+    fun testInputLetters(){
         openRiddleFragment()
-        "footsteps".forEach {
-            onView(withText(it.toString())).perform(click())
-        }
-        onView(withId(R.id.confirmButton)).perform(click())
-        onView(withText(R.string.correct_resource)).check(matches(isDisplayed()))
+        onView(withId(R.id.two)).perform(click())
+        onView(withId(R.id.two)).check(matches(not((isClickable()))))
     }
 
-
-    private fun <T> first(matcher: Matcher<T>): Matcher<T>? {
-        return object : BaseMatcher<T>() {
-            var isFirst = true
-            override fun matches(item: Any): Boolean {
-                if (isFirst && matcher.matches(item)) {
-                    isFirst = false
-                    return true
-                }
-                return false
-            }
-
-            override fun describeTo(description: Description) {
-                description.appendText("should return first matching item")
-            }
-        }
+    @Test
+    fun testResetScore(){
+        openRiddleFragment()
+        onView(withId(R.id.more)).perform(click())
+        onView(withText(R.string.reset_your_stats)).perform(click())
+        onView(withText(R.string.yes_resource)).perform(click())
+        onView(withId(R.id.recyclerView))
+            .perform(RecyclerViewActions.actionOnItemAtPosition<LevelAdapter.MyViewHolder>(0, click()))
+        onView(withId(R.id.textViewScore)).check(matches(hasValueEqualTo(0)))
     }
+
 
     private fun hasValueEqualTo(content: Int = 50): Matcher<View?>? {
         return object : TypeSafeMatcher<View?>() {
